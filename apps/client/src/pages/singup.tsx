@@ -1,12 +1,13 @@
-import { Signup, Cards, Signin } from "ui";
+import { Signup, Cards, Signin, Profile } from "ui";
 
 export default function SingUpPage() {
   return (
     <>
       <div>
         {/* <Signup /> */}
-        <Signin />
+        {/* <Signin /> */}
         {/* <Cards /> */}
+        <Profile />
       </div>
     </>
   );
