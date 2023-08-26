@@ -4,5 +4,6 @@ export * from "./Cards"
 export * from "./Signin";
 export * from "./Cart"
 export * from "./ProductCatalog"
-export * from "./Profile"
 export * from "./ProductDetails"
+export * from "./Creditcardform"
+export * from "./Orderhistory"

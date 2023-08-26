@@ -4,15 +4,17 @@ import {
   Card,
   CardContent,
   Grid,
-  Stack,
   Typography,
 } from "@mui/material";
+import { Input, Button, Stack } from "@mui/joy/";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ChatIcon from "@mui/icons-material/Chat";
 import NumbersIcon from "@mui/icons-material/Numbers";
 import PublicIcon from "@mui/icons-material/Public";
+import ModeIcon from "@mui/icons-material/Mode";
+import { Orderhistory } from "ui";
 
-export function Profile() {
+export default function Profile() {
   return (
     <>
       <div
@@ -162,7 +164,7 @@ export function Profile() {
                 margin: "30px",
               }}
             >
-              <div>
+              <div style={{ paddingBottom: "10px" }}>
                 <Typography
                   sx={{
                     fontSize: "50px",
@@ -171,14 +173,35 @@ export function Profile() {
                 >
                   Billing & Payment
                 </Typography>
-                <div>
-                  <Typography sx={{ fontSize: "20px" }}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptates quibusdam voluptate sequi eveniet, quia sint,
-                    facere culpa tenetur ipsa. Quidem.
-                  </Typography>
-                </div>
+                <Typography sx={{ fontSize: "20px" }}>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptates quibusdam voluptate sequi eveniet, quia sint,
+                  facere culpa tenetur ipsa. Quidem.
+                </Typography>
               </div>
+              <Card
+                variant="outlined"
+                sx={{ borderRadius: "15px", maxWidth: "300px" }}
+              >
+                <CardContent>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      gap: "30px",
+                    }}
+                  >
+                    <Typography variant="h5">Card Info</Typography>
+                    <ModeIcon fontSize="large" />
+                  </div>
+                  <Typography variant="body1">
+                    <b>CCN</b> : XX4567
+                  </Typography>
+                  <Typography variant="body1">
+                    <b>CVV</b> : XX2
+                  </Typography>
+                </CardContent>
+              </Card>
             </Box>
             <Box
               sx={{
@@ -203,6 +226,7 @@ export function Profile() {
                   </Typography>
                 </div>
               </div>
+              <Orderhistory />
             </Box>
             <Box
               sx={{
@@ -227,6 +251,25 @@ export function Profile() {
                   </Typography>
                 </div>
               </div>
+              <br />
+              <form
+                onSubmit={(event) => {
+                  event.preventDefault();
+                  const formData = new FormData(event.currentTarget);
+                  const formJson = Object.fromEntries(
+                    (formData as any).entries()
+                  );
+                  alert(JSON.stringify(formJson));
+                }}
+              >
+                <Stack spacing={1}>
+                  <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+                    Enter Gift Code{" "}
+                  </Typography>
+                  <Input placeholder="Ex  :  DH39HJ39048KL9" required />
+                  <Button type="submit">Submit</Button>
+                </Stack>
+              </form>
             </Box>
           </Grid>
         </Grid>

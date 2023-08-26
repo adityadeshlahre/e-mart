@@ -1,4 +1,4 @@
-import { Signup, Cards, Signin, Profile } from "ui";
+import { Signup, Cards, Signin } from "ui";
 
 export default function SingUpPage() {
   return (
@@ -7,7 +7,6 @@ export default function SingUpPage() {
         {/* <Signup /> */}
         {/* <Signin /> */}
         {/* <Cards /> */}
-        <Profile />
       </div>
     </>
   );
