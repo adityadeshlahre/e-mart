@@ -26,7 +26,7 @@ export function Cart() {
   ]);
 
   // Function to remove an item from the cart
-  const removeItemFromCart = (itemIndex) => {
+  const removeItemFromCart = (itemIndex: any) => {
     const updatedCart = cartItems.filter((_, index) => index !== itemIndex);
     setCartItems(updatedCart);
   };
