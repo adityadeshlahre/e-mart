@@ -18,7 +18,7 @@ export function Signin() {
           >
             <Card>
               <CardContent>
-                <Typography variant="h2" width="bold" textAlign="center">
+                <Typography variant="h4" width="bold" textAlign="center">
                   SignIn On EMART
                 </Typography>
                 <TextField
