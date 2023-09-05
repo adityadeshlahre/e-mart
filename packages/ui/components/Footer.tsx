@@ -10,11 +10,14 @@ export const Footer: React.FC = () => {
         <Typography variant="h4" component="div">
           Emart 🔥 Your Online Shopping Destination
         </Typography>
-        <Typography variant="body2">
-          Welcome to EMART, your premier online shopping destination where
-          convenience meets quality. Discover a world of endless possibilities
-          with our cutting-edge eCommerce platform, designed to provide you with
-          a seamless and delightful shopping experience.
+        <Typography variant="body2" fontSize={"15px"}>
+          <b>
+            <h2>Welcome to EMART</h2>
+          </b>
+          your premier online shopping destination where convenience meets
+          quality. Discover a world of endless possibilities with our
+          cutting-edge eCommerce platform, designed to provide you with a
+          seamless and delightful shopping experience.
         </Typography>
         <Typography variant="body2">
           &copy;{currentYear} All rights reserved. Reliance Retail Ltd.
