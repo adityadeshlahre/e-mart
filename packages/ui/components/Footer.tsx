@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
           seamless and delightful shopping experience.
         </Typography>
         <Typography variant="body2">
-          &copy;{currentYear} All rights reserved. Reliance Retail Ltd.
+          &copy;{currentYear} All rights reserved. Emart Retail Ltd.
         </Typography>
       </Box>
     </Paper>
