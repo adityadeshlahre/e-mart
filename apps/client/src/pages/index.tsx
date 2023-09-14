@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Appbar, Footer, ProductCatalog } from "ui";
+import { showAlert } from "common";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,13 @@ export default function Home() {
       <Appbar />
       <ProductCatalog />
       <Footer />
+      <button
+        onClick={() => {
+          showAlert("jksadlhgjkfsdghkjfshjklhgdkhj");
+        }}
+      >
+        ALERT
+      </button>
     </>
   );
 }
